@@ -36,7 +36,7 @@ SELECT AVG(preco) FROM produtos; -- Média
 SELECT MIN(preco) FROM produtos; -- Menor valor
 SELECT MAX(preco) FROM produtos; -- Maior valor
 
-ALTER TABLE produtos ADD COLUMN categoria VARCHAR(50);
+ALTER TABLE produtos ADD COLUMN categoria VARCHAR(50); 
 SELECT categoria, COUNT(*) AS total_produtos
 FROM produtos
 GROUP BY categoria;
@@ -46,7 +46,8 @@ GROUP BY categoria;
 SELECT categoria, MIN(preco) AS menor_preco, MAX(preco) AS maior_preco
 FROM produtos
 GROUP BY categoria; 
+
 SELECT categoria, COUNT(*) AS total
 FROM produtos
 GROUP BY categoria
-HAVING COUNT(*) > 1;
+HAVING COUNT(*) > 1; 
